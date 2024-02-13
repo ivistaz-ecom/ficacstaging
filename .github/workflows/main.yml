@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy html pages
+      - name: Deploy FICAC pages
         uses: appleboy/ssh-action@master
 
         with:
@@ -19,4 +19,7 @@ jobs:
 
           script: |
             cd /home/ficacweb/web/ficac2.ficacworld.org/public_html/
-            echo "logged in successfully"
+            git pull origin main
+            npm install
+            npm run build
+            pm2 restart ficac
