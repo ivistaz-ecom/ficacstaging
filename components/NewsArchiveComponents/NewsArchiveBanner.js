@@ -42,7 +42,7 @@ const HomeBanner = () => {
 
 
   return (
-    <Container fluid className='px-5 '>
+    <Container fluid className='px-lg-5 p-0'>
       <Container fluid style={backgroundStyles}>
       </Container>
     </Container>

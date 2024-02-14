@@ -178,7 +178,7 @@ a.active-menu.nav-link:focus {
 
 
 .container {
-  width: 1080px;
+  width: 1080px !important;
 }
 
 @media (max-width:767px) {

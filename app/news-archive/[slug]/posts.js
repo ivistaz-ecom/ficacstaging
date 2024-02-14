@@ -42,12 +42,8 @@ const Posts = ({ slug }) => {
             className='px-lg-3 shadow-sm col-lg-12 position-relative'
           >
             <div className='pt-5'>
-              <div
-                style={{ fontSize: "25px", fontWeight: "bold", color: "#741B1B" }}
-              >
-                <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                >
-                </h1>
+              <div className='pt-5'>
+                <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
               </div>
             </div>
             <div>
@@ -55,7 +51,7 @@ const Posts = ({ slug }) => {
             </div>
 
             <div
-              className='py-4'
+              className='py-4 fs-5 fw-300'
               dangerouslySetInnerHTML={{ __html: post.content.rendered }}
             />
             <div className='py-4'>

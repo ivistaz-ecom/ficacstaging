@@ -42,10 +42,10 @@ const Posts = ({ slug }) => {
           <div key={post.id}
             className='px-lg-3 col-lg-12 position-relative'>
             <div className='pt-5'>
-                <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} className='fs-1 txt-dark'/>
+              <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} className='fs-1 txt-dark' />
             </div>
             <div>
-              <hr/>
+              <hr />
             </div>
 
             <div
