@@ -35,8 +35,8 @@ const EventArchiveBanner = () => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: isMobile ? 'center center' : 'initial',
         backgroundImage: isMobile
-            ? "url('/banner_images/events-archive.jpeg')"
-            : "url('/banner_images/events-archive.jpeg')",
+            ? "url('/banner_images/events_archive.jpg')"
+            : "url('/banner_images/events_archive.jpg')",
     };
 
     return (

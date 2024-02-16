@@ -190,7 +190,7 @@ a.active-menu.nav-link:focus {
     color: black;
   }
   .navbar-nav {
-    /* color: black; */
+    color: black;
     margin: 0px;
   }
   .nav-link.active {
