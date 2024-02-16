@@ -2,11 +2,19 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Button } from 'react-bootstrap';
 import Link from 'next/link';
-import Footer from '../../../components/Shared/Footer'
+import Footer from '../../../components/Shared/Footer';
+// import { useNavigate } from 'react-router-dom';
+
 
 const Posts = ({ slug }) => {
 
   const [data, setData] = useState(null);
+ 
+    // const navigate = useNavigate();
+  
+    // const handleClick = () => {
+    //   navigate(-1); // Go back one step in history
+    // };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,6 +71,15 @@ const Posts = ({ slug }) => {
                   Go Back
                 </Button>
               </Link>
+{/* <Button
+  className='rounded-2 py-2 px-3 px-lg-2 d-inline-block text-white'
+  style={{ backgroundColor: "#001C79" }}
+  onClick={() => Router.back()}
+>
+  Go Back
+</Button> */}
+
+
             </div>
           </div>
         ))}
