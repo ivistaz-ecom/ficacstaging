@@ -8,7 +8,7 @@ const HomeIntroComponent = () => {
       <Container className='p-5'>
         <Row className='mt-2'>
           <Col sm={12} lg={5} className='d-flex flex-column justify-content-center'>
-            <Image src="/aboutus_image.png" width={500} height={400} alt="aboutus" className='w-100 h-auto' />
+            <Image src="/home.jpeg" width={300} height={150} alt="aboutus" className='w-100 h-auto img-fluid' />
           </Col>
           <Col className='' lg={7}>
             <h2 className='fs-1 txt-dark'>About FICAC</h2>

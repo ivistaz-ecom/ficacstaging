@@ -55,11 +55,18 @@ const HomeBannerContent = () => {
                          <li className='fs-5 fw-200'>A copy of the Corps’/Associations or Regional Association’s Membership lists (with details of all members). Specification of the Executive Board is necessary.</li>
                     </ul>
                </Container>
-               <Container>
+               <Container className='py-2 pb-3'>
                     <h4 className='txt-dark fw-600 fs-3'>Application Procedure</h4>
                     <p className='fs-5 fw-200'>The application documents are forwarded to the members of the FICAC Legal Committee, responsible for membership, for their review and subsequent recommendation to the Board of Directors. After approval, the Board of Directors may grant provisional membership to the new member, subject to confirmation by the General Assembly. </p>
                     <p className='fs-5 fw-200'>The Board of Directors reviews the recommendation and submits the application with all recommendation to the FICAC aisbl General Assembly Meeting, which is usually held every 3 years in conjunction with the World Congress of Consuls. </p>
                     <p className='fs-5 fw-200'>A yes vote means that the Corps/Association of Regional Association’s can become a Member of FICAC, once membership fees for the current year have been paid.</p>
+                    <Link
+                         href="/Membership Procedure.pdf"
+                         target='_blank'
+                         className='btn btn-primary px-3 py-2 fs-5 wbg-blue border-0'
+                    >
+                         View Procedure
+                    </Link>
                </Container>
                <Container>
                     <h4 className='txt-dark fw-600 fs-3'>Information About The Application</h4>
@@ -69,7 +76,7 @@ const HomeBannerContent = () => {
                     <h4 className='txt-dark fw-600 fs-3'>Application Form Membership</h4>
                     <p className='fs-5 fw-200'>If you wish to become a Member of FICAC aisbl, please complete the Application Form below.</p>
                     <Link
-                         href="/Application-Form-Membership-2019.pdf"
+                         href="/Membership Form.pdf"
                          target='_blank'
                          className='btn btn-primary px-3 py-2 fs-5 wbg-blue border-0'
                     >

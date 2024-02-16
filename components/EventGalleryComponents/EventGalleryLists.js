@@ -7,7 +7,10 @@ import configData from "../../config.json";
 const EventGalleryLists = () => {
     const [data, setData] = useState([]);
 
-    const Acf_URL = `${configData.SERVER_URL}events_gallery?productions=${configData.SERVER}&_embed`;
+    // const Acf_URL = `${configData.SERVER_URL}events_gallery?productions=${configData.SERVER}&_embed`;
+
+    const categoryId = 15; // Your category ID
+    const Acf_URL = `${configData.SERVER_URL}events_gallery?productions=${configData.SERVER}&categories=${categoryId}&_embed`;
 
     const fetchPosts = async () => {
         try {
@@ -34,6 +37,28 @@ const EventGalleryLists = () => {
 
     return (
         <>
+          {/* Events Archive */}
+          <Container className='mt-5 '>
+                <Row>
+                    <Col className='d-flex justify-content-end mb-4  d-inline-flex gap-1'   >
+                        <Link href="/event-archive"
+                            style={{
+                                textDecoration: "none",
+                                color: "white",
+
+                            }}>
+                            <p className='px-3 py-2 d-inline-flex rounded-2 '
+                                style={{
+                                    backgroundColor: "#001C79",
+                                }}
+                            >
+                                Event Archive
+                                <i class="bi bi-arrow-right mx-1"></i>
+                            </p>
+                        </Link>
+                    </Col>
+                </Row>
+            </Container>
             <Container className='py-3'>
                 {data.map((item, index) => (
                     <div class="card mb-3 rounded-3 btn-border" key={index}>
@@ -53,28 +78,7 @@ const EventGalleryLists = () => {
                 ))}
             </Container>
 
-            {/* Events Archive */}
-            {/* <Container className='mt-5'>
-                <Row>
-                    <Col className='d-flex justify-content-center mb-4  d-inline-flex gap-1'   >
-                        <Link href="/event-archive"
-                            style={{
-                                textDecoration: "none",
-                                color: "white",
-
-                            }}>
-                            <p className='p-2 d-inline-flex rounded-2 '
-                                style={{
-                                    backgroundColor: "#001C79",
-                                }}
-                            >
-                                Event Archive
-                                <i class="bi bi-arrow-right mx-1"></i>
-                            </p>
-                        </Link>
-                    </Col>
-                </Row>
-            </Container> */}
+        
 
         </>
 
