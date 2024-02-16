@@ -114,7 +114,7 @@ const SuccessStories = () => {
                 ) : (
                     <div className="loadmodediv">
                         {end ? (<p>No more events to load</p>) : (<Button variant="primary" className='btn btn-primary border-0 px-3 py-2 fs-5 fw-300'
-                            style={{ backgroundColor: '#001CAA' }} onClick={loadMore}  >Load more</Button>
+                            style={{ backgroundColor: '#001CAA' }} onClick={loadMore}  >Load More</Button>
                         )}</div>
                 )}
             </section>
