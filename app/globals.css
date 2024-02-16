@@ -183,14 +183,14 @@ a.active-menu.nav-link:focus {
 
 @media (max-width:767px) {
   .container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .navbar-nav, .navbar-nav .nav-link.show {
     color: black;
   }
   .navbar-nav {
-    color: black;
+    /* color: black; */
     margin: 0px;
   }
   .nav-link.active {
@@ -398,7 +398,7 @@ i.bi.bi-chevron-up {
 
 /* Add styles when scrolled */
 .your-custom-class.scrolled {
-  background-color: #YourNewColor;
+  background-color: YourNewColor;
   /* Add any other styles you want to apply when scrolled */
 }
 
