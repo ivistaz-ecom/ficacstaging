@@ -41,7 +41,7 @@ const DocumentsList = () => {
 {items.acf.pdf_french?(
 <> {items.acf.pdf_file.url?(
     <Col lg={2}>
-        <Link href={items.acf.pdf_file.url} className='btn btn-primary border-0 wbg-blue px-3 py-2 fs-6 fw-300' target='_blank'>View in english</Link>
+        <Link href={items.acf.pdf_file.url} className='btn btn-primary border-0 wbg-blue px-3 py-2 fs-6 fw-300' target='_blank'>View in English</Link>
     </Col>
 
 ):''}</>):(<> {items.acf.pdf_file.url?(
