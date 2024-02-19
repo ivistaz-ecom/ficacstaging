@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import configData from '../../../config.json';
 import { Col, Container, Row } from 'react-bootstrap';
 import Image from 'next/image';
+import { IoArrowBackSharp } from "react-icons/io5";
+import Link from 'next/link';
+
 
 const EventArchiveGallery = ({ slug }) => {
     const [data, setData] = useState(null);
@@ -64,13 +67,20 @@ const EventArchiveGallery = ({ slug }) => {
     return (
       <>
         <Container>
+        <nav class="navbar navbar-light">
+      <div class="container">
+        <Link class="navbar-brand" href="/event-archive">
+          <IoArrowBackSharp size={35} /> Back to Events Archive
+        </Link>
+      </div>
+    </nav>
           <div>
             {/* {slug} */}
             <Row>
               {data.map((post) => (
                 <>
                   <Col
-                    className="pt-5 mb-4"
+                    className="pt-4 mb-4"
                   >
                     <h1 className="fw-bold" dangerouslySetInnerHTML={{ __html: post.title.rendered }}>
                     </h1>

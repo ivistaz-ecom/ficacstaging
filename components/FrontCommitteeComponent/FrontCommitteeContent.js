@@ -27,15 +27,15 @@ const HomeBannerContent = () => {
           </Col>
           <Col lg={8}>
             <p className='fs-5 fw-300'>
-              Due to the expansion of the Federation in terms of its scope, objectives and activities and as it has moved to new levels of development, Regional Committees were established in all regions of the world and Central Committees were established, focusing on specific issues.
+              Due to the expansion of the Federation in terms of its scope, objectives and activities, and as it has moved to new levels of development, Regional Committees were established in all regions of the world and Central Committees were established, focusing on specific issues.
             </p>
 
             <p className='fs-5 fw-300'>
-              Each Committee of the Federation has been defined in terms of its purpose and how it is expected to operate at the FICAC level. The FICAC Committee Terms of Reference, which was initially adopted in 2010, and amended and approved by the new Board of Directors in July 2023 specifies those terms and purposes.
+              Each Committee of the Federation has been defined in terms of its purpose and how it is expected to operate at the FICAC level. The FICAC Committee Terms of Reference, which was initially adopted in 2010, and amended and approved by the new Board of Directors in July 2023, specifies those terms and purposes.
             </p>
 
             <p className='fs-5 fw-300'>
-              Committees were formed to deal with specific FICAC issues. Each Committee is chaired by a Regional Chairperson and staffed by selection of the Chair to include Deans and members who have a specific interest in the topic.
+              Committees were formed to deal with specific FICAC issues. Each Committee is chaired by a Regional Chairperson and staffed by the selection of the Chair to include Deans and members who have a specific interest in the topic.
             </p>
 
             <p className='fs-5 fw-300'>

@@ -412,3 +412,7 @@ i.bi.bi-chevron-up {
 .news-hover:hover a{
   /* color: white !important; */
 }
+
+.event-card:hover .event-button{
+  background: #001CAA !important;
+}
