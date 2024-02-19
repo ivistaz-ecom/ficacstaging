@@ -59,20 +59,21 @@ const EventGalleryLists = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container className='py-3'>
+            <Container className='py-3 '>
                 {data.map((item, index) => (
-                    <div class="card mb-3 rounded-3 btn-border" key={index}>
+                    <div class="card mb-3 rounded-3 btn-border event-card" key={index}>
                         <div class="row g-0 p-0 p-3">
                             <div class="col-md-10">
-                                <div class="card-body">
+                                <div class="card-body ">
                                     <h5 class="card-title fs-5 fw-500" dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
                                     <p class="card-text fs-6 fw-300" >{item.acf.date}</p>
                                 </div>
                             </div>
-                            <div class="col-md-2 justify-content-center align-self-center text-center">
-                                <Link href={`/gallery/${item.slug}`} className='btn btn-primary border-0 px-3 py-2 fs-5 fw-300' style={{ backgroundColor: '#001CAA' }}>View Photos</Link>
+                            <div class="col-md-2 justify-content-center align-self-center text-center ">
+                                <Link href={`/gallery/${item.slug}`} className='btn btn-primary border-0 px-3 py-2 fs-5 fw-300 event-button' style={{ backgroundColor: '#001C79' }}>View Photos</Link>
                             </div>
                         </div>
+                        {/* backgroundColor: '#001CAA' */}
                     </div>
 
                 ))}

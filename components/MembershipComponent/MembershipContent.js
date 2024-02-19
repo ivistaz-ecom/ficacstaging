@@ -19,7 +19,7 @@ const HomeBannerContent = () => {
                          <Col lg={12}>
                               <h3 className='txt-dark fw-600 fs-1'>Application And Membership Procedures</h3>
                               <p className='fs-5 fw-300'>
-                                   Summarized below are the procedures that a Consular Corps or Association or a Regional Association is asked to follow to become a Member of the FICAC aisbl, and the general procedres for remaining a Member Corps/Association or Regional Association of FICAC.
+                                   Summarized below are the procedures that a Consular Corps or Association or a Regional Association is asked to follow to become a Member of the FICAC aisbl, and the general procedures for remaining a Member Corps/Association or Regional Association of FICAC.
                               </p>
                               <h4 className='txt-dark fw-600 fs-3'>Applications</h4>
                               <p className='fs-5 fw-300'>
