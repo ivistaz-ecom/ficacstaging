@@ -33,18 +33,21 @@ const Posts = ({ slug }) => {
     return <p>Please wait..</p>;
   }
   return (
+    <>
+    
+    <nav class="navbar navbar-light">
+    <div class="container">
+      <Link class="navbar-brand" href="/news">
+        <IoArrowBackSharp size={35} /> Back to News
+      </Link>
+    </div>
+  </nav>
     <div>
       {/* {slug} */}
       {/* <Header /> */}
-      <nav class="navbar navbar-light">
-      <div class="container">
-        <Link class="navbar-brand" href="/news">
-          <IoArrowBackSharp size={35} /> Back to News
-        </Link>
-      </div>
-    </nav>
+  
       <Container
-        className='d-flex flex-row justify-content-center'
+        className='d-flex flex-column align-items-center'
       >
         {data.map((post) => (
           <div key={post.id}
@@ -66,8 +69,12 @@ const Posts = ({ slug }) => {
           </div>
         ))}
       </Container>
-      <Footer />
+ 
     </div>
+    <Footer />
+    
+    </>
+   
   )
 }
 
