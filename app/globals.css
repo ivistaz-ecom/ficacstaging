@@ -418,3 +418,9 @@ i.bi.bi-chevron-up {
 }
 
 
+/* to avoid black color in header */
+.navbar-nav {
+ --bs-nav-link-color: #fff;
+  --bs-nav-link-hover-color: #fff;
+
+}
