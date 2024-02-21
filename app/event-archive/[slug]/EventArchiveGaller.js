@@ -1,10 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import configData from '../../../config.json';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row , Button } from 'react-bootstrap';
 import Image from 'next/image';
 import { IoArrowBackSharp } from "react-icons/io5";
 import Link from 'next/link';
+
 
 
 const EventArchiveGallery = ({ slug }) => {
@@ -166,11 +167,17 @@ const EventArchiveGallery = ({ slug }) => {
                         </Col>
                       ))}
                     </Row>
+                    
                   </Col>
+                  
                 </>
               ))}
             </Row>
           </div>
+          <div className='py-4'>
+              <Link href="/event-archive" className='btn wbg-blue py-2 px-3 m-2 text-white btn-primary border-0'>Go Back to Events Archive</Link>
+            </div>
+          
         </Container>
   
             {/* {selectImage && (

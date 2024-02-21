@@ -16,7 +16,7 @@ const HomeBannerContent = () => {
       <Container className='my-5'>
         <Row>
           <Col lg={4} className='align-items-center d-flex'>
-            <Image src='/about_us_image.png' width={300} height={300} alt='' className='w-100' />
+            <Image src='/About Image.jpg' width={336} height={300} alt='' className='img-fluid' />
           </Col>
           <Col lg={8}>
             <p className='pt-2 fs-5 lh-2 fw-300 '>FICAC was established in Copenhagen in October 1982. It was born
