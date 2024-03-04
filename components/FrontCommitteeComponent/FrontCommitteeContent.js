@@ -19,7 +19,7 @@ const HomeBannerContent = () => {
       <Container className='mt-5'>
         <Row>
           <Col>
-            <Image src="/ficac_content_committe.png" alt="aboutus"
+            <Image src="/ficac_content_committe.jpg" alt="aboutus"
               className='w-100 h-auto'
               width={200}
               height={250}
