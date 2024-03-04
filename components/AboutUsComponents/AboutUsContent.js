@@ -29,9 +29,9 @@ const HomeBannerContent = () => {
               all consular officers in all receiving States.</p>
             <p className='pt-2 fs-5 lh-2 fw-300 '>FICAC aims to promote and strengthen mutual understanding
               between Honorary Consuls and Career Consuls worldwide; develop a
-              framework and basis for exchange of current information, ideas and
+              framework and basis for the exchange of current information, ideas and
               suggestions regarding matters related to the office of Honorary
-              Consuls and Career Consuls; promote at national level and
+              Consuls and Career Consuls; promote at the national level and
               international for a better understanding of duties and
               responsibilities, rights and privileges of Honorary Consuls and
               Career Consuls.</p>
