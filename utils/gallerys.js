@@ -1,10 +1,15 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Image, Container, Row, Col } from 'react-bootstrap';
-import Link from 'next/link';
 import GalleryPopup from '../components/GalleryPopup'; // Adjust the path based on your project structure
 
+import ConfigData from '../config.json'
+
 const Post = ({ slug }) => {
+
+    const siteUrl = ConfigData.SERVER_URL;
+
+    const serverUrl = ConfigData.SERVER;
 
     const [data, setData] = useState(null);
     const [category, setCategory] = useState();
@@ -16,7 +21,7 @@ const Post = ({ slug }) => {
 
     const fetchData = async () => {
         try {
-            const res = await fetch(`https://beta.ficacworld.org/wp-json/wp/v2/events_gallery?slug=${slug}`);
+            const res = await fetch(`${siteUrl}events_gallery?slug=${slug}&productions[]=${serverUrl}`);
             if (!res.ok) {
                 throw new Error(`Failed to fetch data. Status: ${res.status}`);
             }
@@ -130,7 +135,7 @@ const Post = ({ slug }) => {
                     return prevIndex;
                 }
             }
-            else {
+            else if (selectedImageId == 'gallery_5') {
                 const galleryArray = data[0].acf.photo_gallery.gallery_5[4];
                 if (Array.isArray(galleryArray) && galleryArray.length > 0) {
                     const newIndex = (prevIndex + 1) % galleryArray.length;
@@ -149,7 +154,97 @@ const Post = ({ slug }) => {
                 }
 
             }
+            else if (selectedImageId == 'gallery_6') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_6[5];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex + 1) % galleryArray.length;
+                    const nextImage = { ...galleryArray[newIndex] };
 
+                    if (nextImage) {
+                        setSelectedImage(nextImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid next image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_6 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+            else if (selectedImageId == 'gallery_7') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_7[6];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex + 1) % galleryArray.length;
+                    const nextImage = { ...galleryArray[newIndex] };
+
+                    if (nextImage) {
+                        setSelectedImage(nextImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid next image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_7 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+
+            else if (selectedImageId == 'gallery_8') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_8[7];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex + 1) % galleryArray.length;
+                    const nextImage = { ...galleryArray[newIndex] };
+
+                    if (nextImage) {
+                        setSelectedImage(nextImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid next image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_8 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+            else if (selectedImageId == 'gallery_9') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_9[8];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex + 1) % galleryArray.length;
+                    const nextImage = { ...galleryArray[newIndex] };
+
+                    if (nextImage) {
+                        setSelectedImage(nextImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid next image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_9 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+            else {
+                const galleryArray = data[0].acf.photo_gallery.gallery_10[9];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex + 1) % galleryArray.length;
+                    const nextImage = { ...galleryArray[newIndex] };
+
+                    if (nextImage) {
+                        setSelectedImage(nextImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid next image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_10 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
         });
     };
 
@@ -230,7 +325,7 @@ const Post = ({ slug }) => {
                 }
             }
 
-            else {
+            else if (selectedImageId == 'gallery_5') {
                 const galleryArray = data[0].acf.photo_gallery.gallery_5[4];
                 if (Array.isArray(galleryArray) && galleryArray.length > 0) {
                     const newIndex = (prevIndex - 1 + galleryArray.length) % galleryArray.length;
@@ -245,6 +340,100 @@ const Post = ({ slug }) => {
                     }
                 } else {
                     console.error('Invalid gallery_5 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+
+            else if (selectedImageId == 'gallery_6') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_6[5];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex - 1 + galleryArray.length) % galleryArray.length;
+                    const previousImage = { ...galleryArray[newIndex] };
+
+                    if (previousImage) {
+                        setSelectedImage(previousImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid previous image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_6 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+            else if (selectedImageId == 'gallery_7') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_7[6];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex - 1 + galleryArray.length) % galleryArray.length;
+                    const previousImage = { ...galleryArray[newIndex] };
+
+                    if (previousImage) {
+                        setSelectedImage(previousImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid previous image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_7 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+
+            else if (selectedImageId == 'gallery_8') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_8[7];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex - 1 + galleryArray.length) % galleryArray.length;
+                    const previousImage = { ...galleryArray[newIndex] };
+
+                    if (previousImage) {
+                        setSelectedImage(previousImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid previous image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_8 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+
+            else if (selectedImageId == 'gallery_9') {
+                const galleryArray = data[0].acf.photo_gallery.gallery_9[8];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex - 1 + galleryArray.length) % galleryArray.length;
+                    const previousImage = { ...galleryArray[newIndex] };
+
+                    if (previousImage) {
+                        setSelectedImage(previousImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid previous image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_9 array:', galleryArray);
+                    return prevIndex;
+                }
+            }
+
+            else {
+                const galleryArray = data[0].acf.photo_gallery.gallery_10[9];
+                if (Array.isArray(galleryArray) && galleryArray.length > 0) {
+                    const newIndex = (prevIndex - 1 + galleryArray.length) % galleryArray.length;
+                    const previousImage = { ...galleryArray[newIndex] };
+
+                    if (previousImage) {
+                        setSelectedImage(previousImage);
+                        return newIndex;
+                    } else {
+                        console.error('Invalid previous image at index:', newIndex);
+                        return prevIndex;
+                    }
+                } else {
+                    console.error('Invalid gallery_10 array:', galleryArray);
                     return prevIndex;
                 }
             }
@@ -474,6 +663,206 @@ const Post = ({ slug }) => {
                                                                 alt=""
                                                                 width="100%"
                                                                 onClick={() => openSelectedImage(photo, index, 'gallery_5', '4')}
+                                                            />
+                                                        </Col>
+                                                    </Col>
+                                                ))}
+                                            </Row>
+                                        </Col>
+
+                                        <Col className="pt-5 mb-4">
+                                            {/* <h1 className="fw-bold" dangerouslySetInnerHTML={{ __html: post.title.rendered }} /> */}
+                                            {/* <hr className="h-line" style={{ color: "#810400" }} /> */}
+                                            <h1 className="fw-bold" style={{ color: "#810400" }} dangerouslySetInnerHTML={{ __html: post.acf.title_6 }}>
+                                            </h1>
+
+                                            <Row className='d-flex flex-lg-row flex-column flex-wrap'>
+                                                {post.acf.photo_gallery.gallery_6[5].map((photo, index) => (
+                                                    <Col key={photo.id} md={3}>
+                                                        <Col
+                                                            className='p-0 d-lg-block d-none'
+                                                            style={{
+                                                                marginTop: `${index % 4 === 0 ? 0 : 40 * (index % 4)}px`,
+                                                                marginLeft: `${index % 4 === 0 ? 0 : -50}px`,
+                                                            }}
+                                                        >
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                height={212}
+                                                                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_6', '5')}
+                                                                className='cursor-pointer'
+                                                            />
+                                                        </Col>
+
+                                                        <Col className='p-0 d-lg-none d-block mt-3'>
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_6', '5')}
+                                                            />
+                                                        </Col>
+                                                    </Col>
+                                                ))}
+                                            </Row>
+                                        </Col>
+
+                                        <Col className="pt-5 mb-4">
+                                            {/* <h1 className="fw-bold" dangerouslySetInnerHTML={{ __html: post.title.rendered }} /> */}
+                                            {/* <hr className="h-line" style={{ color: "#810400" }} /> */}
+                                            <h1 className="fw-bold" style={{ color: "#810400" }} dangerouslySetInnerHTML={{ __html: post.acf.title_7 }}>
+                                            </h1>
+
+                                            <Row className='d-flex flex-lg-row flex-column flex-wrap'>
+                                                {post.acf.photo_gallery.gallery_7[6].map((photo, index) => (
+                                                    <Col key={photo.id} md={3}>
+                                                        <Col
+                                                            className='p-0 d-lg-block d-none'
+                                                            style={{
+                                                                marginTop: `${index % 4 === 0 ? 0 : 40 * (index % 4)}px`,
+                                                                marginLeft: `${index % 4 === 0 ? 0 : -50}px`,
+                                                            }}
+                                                        >
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                height={212}
+                                                                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_7', '6')}
+                                                                className='cursor-pointer'
+                                                            />
+                                                        </Col>
+
+                                                        <Col className='p-0 d-lg-none d-block mt-3'>
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_7', '6')}
+                                                            />
+                                                        </Col>
+                                                    </Col>
+                                                ))}
+                                            </Row>
+                                        </Col>
+
+                                        <Col className="pt-5 mb-4">
+                                            {/* <h1 className="fw-bold" dangerouslySetInnerHTML={{ __html: post.title.rendered }} /> */}
+                                            {/* <hr className="h-line" style={{ color: "#810400" }} /> */}
+                                            <h1 className="fw-bold" style={{ color: "#810400" }} dangerouslySetInnerHTML={{ __html: post.acf.title_8 }}>
+                                            </h1>
+
+                                            <Row className='d-flex flex-lg-row flex-column flex-wrap'>
+                                                {post.acf.photo_gallery.gallery_8[7].map((photo, index) => (
+                                                    <Col key={photo.id} md={3}>
+                                                        <Col
+                                                            className='p-0 d-lg-block d-none'
+                                                            style={{
+                                                                marginTop: `${index % 4 === 0 ? 0 : 40 * (index % 4)}px`,
+                                                                marginLeft: `${index % 4 === 0 ? 0 : -50}px`,
+                                                            }}
+                                                        >
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                height={212}
+                                                                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_8', '7')}
+                                                                className='cursor-pointer'
+                                                            />
+                                                        </Col>
+
+                                                        <Col className='p-0 d-lg-none d-block mt-3'>
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_8', '7')}
+                                                            />
+                                                        </Col>
+                                                    </Col>
+                                                ))}
+                                            </Row>
+                                        </Col>
+
+                                        <Col className="pt-5 mb-4">
+                                            {/* <h1 className="fw-bold" dangerouslySetInnerHTML={{ __html: post.title.rendered }} /> */}
+                                            {/* <hr className="h-line" style={{ color: "#810400" }} /> */}
+                                            <h1 className="fw-bold" style={{ color: "#810400" }} dangerouslySetInnerHTML={{ __html: post.acf.title_9 }}>
+                                            </h1>
+
+                                            <Row className='d-flex flex-lg-row flex-column flex-wrap'>
+                                                {post.acf.photo_gallery.gallery_9[8].map((photo, index) => (
+                                                    <Col key={photo.id} md={3}>
+                                                        <Col
+                                                            className='p-0 d-lg-block d-none'
+                                                            style={{
+                                                                marginTop: `${index % 4 === 0 ? 0 : 40 * (index % 4)}px`,
+                                                                marginLeft: `${index % 4 === 0 ? 0 : -50}px`,
+                                                            }}
+                                                        >
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                height={212}
+                                                                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_9', '8')}
+                                                                className='cursor-pointer'
+                                                            />
+                                                        </Col>
+
+                                                        <Col className='p-0 d-lg-none d-block mt-3'>
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_9', '8')}
+                                                            />
+                                                        </Col>
+                                                    </Col>
+                                                ))}
+                                            </Row>
+                                        </Col>
+
+                                        <Col className="pt-5 mb-4">
+                                            {/* <h1 className="fw-bold" dangerouslySetInnerHTML={{ __html: post.title.rendered }} /> */}
+                                            {/* <hr className="h-line" style={{ color: "#810400" }} /> */}
+                                            <h1 className="fw-bold" style={{ color: "#810400" }} dangerouslySetInnerHTML={{ __html: post.acf.title_10 }}>
+                                            </h1>
+
+                                            <Row className='d-flex flex-lg-row flex-column flex-wrap'>
+                                                {post.acf.photo_gallery.gallery_10[9].map((photo, index) => (
+                                                    <Col key={photo.id} md={3}>
+                                                        <Col
+                                                            className='p-0 d-lg-block d-none'
+                                                            style={{
+                                                                marginTop: `${index % 4 === 0 ? 0 : 40 * (index % 4)}px`,
+                                                                marginLeft: `${index % 4 === 0 ? 0 : -50}px`,
+                                                            }}
+                                                        >
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                height={212}
+                                                                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_10', '9')}
+                                                                className='cursor-pointer'
+                                                            />
+                                                        </Col>
+
+                                                        <Col className='p-0 d-lg-none d-block mt-3'>
+                                                            <Image
+                                                                src={photo.full_image_url}
+                                                                alt=""
+                                                                width="100%"
+                                                                onClick={() => openSelectedImage(photo, index, 'gallery_10', '9')}
                                                             />
                                                         </Col>
                                                     </Col>
